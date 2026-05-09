@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Comida que Conecta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dash-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-name">Comida que Conecta</div>
+      <div class="logo-role">🛡️ Administrador</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group-label">Principal</div>
+      <a class="nav-item active" href="#"><span class="icon">📊</span> Visão geral</a>
+      <a class="nav-item" href="#"><span class="icon">👥</span> Usuários <span class="nav-badge">12</span></a>
+      <a class="nav-item" href="#"><span class="icon">🌾</span> Produtores</a>
+      <a class="nav-item" href="#"><span class="icon">🤝</span> ONGs</a>
+      <a class="nav-item" href="#"><span class="icon">🛒</span> Pedidos</a>
+      <div class="nav-group-label">Gestão</div>
+      <a class="nav-item" href="#"><span class="icon">🍎</span> Alimentos</a>
+      <a class="nav-item" href="#"><span class="icon">📦</span> Doações</a>
+      <a class="nav-item" href="#"><span class="icon">💰</span> Financeiro</a>
+      <a class="nav-item" href="#"><span class="icon">📈</span> Relatórios</a>
+      <div class="nav-group-label">Sistema</div>
+      <a class="nav-item" href="#"><span class="icon">⚙️</span> Configurações</a>
+      <a class="nav-item" href="#"><span class="icon">🔔</span> Notificações <span class="nav-badge">5</span></a>
+      <a class="nav-item" href="login.html"><span class="icon">🚪</span> Sair</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">AD</div>
+        <div class="sidebar-user-info">
+          <div class="uname">Admin Geral</div>
+          <div class="urole">admin@cqc.com.br</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="dash-main">
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-title">Visão Geral do Sistema</div>
+        <div class="topbar-sub">Quinta-feira, 07 de maio de 2026</div>
+      </div>
+      <div class="topbar-actions">
+        <div class="topbar-icon-btn">🔍</div>
+        <div class="topbar-icon-btn">🔔<span class="notif-dot"></span></div>
+        <div class="topbar-icon-btn">⚙️</div>
+        <a href="login.html" class="btn btn-ghost btn-sm">Sair</a>
+      </div>
+    </div>
+
+    <div class="dash-content">
+
+      <!-- Métricas principais -->
+      <div class="metrics-grid cols-4">
+        <div class="metric-card">
+          <div class="metric-icon" style="background:#F0FAF4;">👥</div>
+          <div class="metric-info">
+            <div class="metric-label">Usuários cadastrados</div>
+            <div class="metric-value">3.847</div>
+            <div class="metric-delta delta-up">▲ 8,2% este mês</div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon" style="background:#FFF5EC;">📦</div>
+          <div class="metric-info">
+            <div class="metric-label">Pedidos em aberto</div>
+            <div class="metric-value">142</div>
+            <div class="metric-delta delta-up">▲ 3 hoje</div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon" style="background:#EFF6FF;">🍎</div>
+          <div class="metric-info">
+            <div class="metric-label">Alimentos redistribuídos</div>
+            <div class="metric-value">12,4t</div>
+            <div class="metric-delta delta-up">▲ 340kg este mês</div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon" style="background:#FEFCE8;">💰</div>
+          <div class="metric-info">
+            <div class="metric-label">Volume financeiro (mês)</div>
+            <div class="metric-value">R$184k</div>
+            <div class="metric-delta delta-up">▲ 12,4%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linha 2 -->
+      <div class="dash-grid cols-3-1" style="margin-bottom:1.1rem;">
+        <!-- Pedidos recentes -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Pedidos recentes</span>
+            <a href="#" class="btn btn-ghost btn-sm">Ver todos</a>
+          </div>
+          <div class="card-body" style="padding:0;">
+            <table class="simple-table">
+              <thead><tr><th>ID</th><th>Comprador</th><th>Produtor</th><th>Valor</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>#4821</td><td>Supermercado Verde</td><td>Faz. dos Pinheiros</td><td>R$1.240</td><td><span class="badge badge-verde">✔ Entregue</span></td></tr>
+                <tr><td>#4820</td><td>Ana Beatriz Costa</td><td>Sítio Boa Vista</td><td>R$67</td><td><span class="badge badge-amarelo">⏳ Em preparo</span></td></tr>
+                <tr><td>#4819</td><td>Rede SuperVerde</td><td>Faz. Verde Vida</td><td>R$3.800</td><td><span class="badge badge-azul">🚚 A caminho</span></td></tr>
+                <tr><td>#4818</td><td>Carlos Menezes</td><td>Comunidade Tucuruí</td><td>R$120</td><td><span class="badge badge-verde">✔ Entregue</span></td></tr>
+                <tr><td>#4817</td><td>Mercadão do Povo</td><td>Faz. dos Pinheiros</td><td>R$5.600</td><td><span class="badge badge-red">✗ Cancelado</span></td></tr>
+                <tr><td>#4816</td><td>Juliana Fonseca</td><td>Sítio São Roque</td><td>R$89</td><td><span class="badge badge-amarelo">⏳ Em preparo</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Aprovações pendentes -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Aguardando aprovação</span>
+            <span class="badge badge-red">12</span>
+          </div>
+          <div class="card-body" style="padding:0 1.2rem;">
+            <div class="item-list">
+              <div class="item-row">
+                <div class="item-avatar" style="background:#F0FAF4;">🌾</div>
+                <div class="item-info"><div class="item-name">Faz. Nova Aurora</div><div class="item-sub">Produtor rural · Parintins, AM</div></div>
+                <div class="item-right"><button class="btn btn-primary btn-sm">Aprovar</button></div>
+              </div>
+              <div class="item-row">
+                <div class="item-avatar" style="background:#EFF6FF;">🤝</div>
+                <div class="item-info"><div class="item-name">ONG Semear Vida</div><div class="item-sub">ONG · Manaus, AM</div></div>
+                <div class="item-right"><button class="btn btn-primary btn-sm">Aprovar</button></div>
+              </div>
+              <div class="item-row">
+                <div class="item-avatar" style="background:#FFF5EC;">🏪</div>
+                <div class="item-info"><div class="item-name">Mercado Fresco</div><div class="item-sub">Mercado · Boa Vista, RR</div></div>
+                <div class="item-right"><button class="btn btn-primary btn-sm">Aprovar</button></div>
+              </div>
+              <div class="item-row">
+                <div class="item-avatar" style="background:#F0FAF4;">🌾</div>
+                <div class="item-info"><div class="item-name">Família Costa</div><div class="item-sub">Produtor rural · Coari, AM</div></div>
+                <div class="item-right"><button class="btn btn-primary btn-sm">Aprovar</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linha 3 -->
+      <div class="dash-grid cols-2">
+        <!-- Últimas doações -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Últimas doações registradas</span>
+            <a href="#" class="btn btn-ghost btn-sm">Ver tudo</a>
+          </div>
+          <div class="card-body" style="padding:0;">
+            <table class="simple-table">
+              <thead><tr><th>ONG</th><th>Produtor</th><th>Alimento</th><th>Qtde</th><th>Data</th></tr></thead>
+              <tbody>
+                <tr><td>ONG Raízes Solidárias</td><td>Faz. dos Pinheiros</td><td>Tomate</td><td>48 kg</td><td>07/05</td></tr>
+                <tr><td>Casa do Pão</td><td>Sítio Boa Vista</td><td>Alface</td><td>22 kg</td><td>07/05</td></tr>
+                <tr><td>ONG Semear Vida</td><td>Faz. Verde Vida</td><td>Abóbora</td><td>110 kg</td><td>06/05</td></tr>
+                <tr><td>Cozinha Solidária AM</td><td>Família Rodrigues</td><td>Banana</td><td>60 kg</td><td>05/05</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Estatísticas de perfis -->
+        <div class="card">
+          <div class="card-header"><span class="card-title">Distribuição de usuários</span></div>
+          <div class="card-body">
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:0.78rem;margin-bottom:4px;"><span style="font-weight:500;">🌾 Produtores rurais</span><span style="font-weight:700;color:var(--verde);">2.412</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:63%;background:var(--verde);"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:0.78rem;margin-bottom:4px;"><span style="font-weight:500;">🛒 Consumidores</span><span style="font-weight:700;color:var(--terra);">891</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:23%;background:var(--terra);"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:0.78rem;margin-bottom:4px;"><span style="font-weight:500;">🤝 ONGs parceiras</span><span style="font-weight:700;color:var(--azul);">182</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:5%;background:var(--azul);"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:0.78rem;margin-bottom:4px;"><span style="font-weight:500;">🏪 Grandes mercados</span><span style="font-weight:700;color:#7C3AED;">362</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:9%;background:#7C3AED;"></div></div>
+              </div>
+            </div>
+            <div style="margin-top:1.4rem;padding-top:1rem;border-top:1px solid #F0F0EB;display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:0.75rem;color:var(--cinza-suave);">Total de usuários ativos</span>
+              <span style="font-size:1.1rem;font-weight:700;color:var(--preto);">3.847</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /dash-content -->
+  </div><!-- /dash-main -->
+</div>
+<script src="main.js"></script>
+</body>
+</html>

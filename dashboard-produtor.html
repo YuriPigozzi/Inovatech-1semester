@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Produtor — Comida que Conecta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dash-wrapper">
+
+  <!-- SIDEBAR verde-escuro -->
+  <aside class="sidebar" style="background:#1A3D2B;">
+    <div class="sidebar-logo">
+      <div class="logo-name">Comida que Conecta</div>
+      <div class="logo-role">🌾 Produtor Rural</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group-label">Principal</div>
+      <a class="nav-item active" href="#"><span class="icon">📊</span> Visão geral</a>
+      <a class="nav-item" href="#"><span class="icon">🍎</span> Meus produtos</a>
+      <a class="nav-item" href="#"><span class="icon">📦</span> Pedidos recebidos <span class="nav-badge">4</span></a>
+      <a class="nav-item" href="#"><span class="icon">🎁</span> Doações</a>
+      <div class="nav-group-label">Financeiro</div>
+      <a class="nav-item" href="#"><span class="icon">💰</span> Ganhos</a>
+      <a class="nav-item" href="#"><span class="icon">📑</span> Notas fiscais</a>
+      <div class="nav-group-label">Conta</div>
+      <a class="nav-item" href="#"><span class="icon">📋</span> Meu perfil</a>
+      <a class="nav-item" href="#"><span class="icon">⭐</span> Avaliações</a>
+      <a class="nav-item" href="#"><span class="icon">⚙️</span> Configurações</a>
+      <a class="nav-item" href="login.html"><span class="icon">🚪</span> Sair</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar" style="background:var(--verde);">JN</div>
+        <div class="sidebar-user-info">
+          <div class="uname">João Nascimento</div>
+          <div class="urole">Faz. dos Pinheiros · AM</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="dash-main">
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-title">Meu Painel de Produtor</div>
+        <div class="topbar-sub">Fazenda dos Pinheiros · Itacoatiara, AM</div>
+      </div>
+      <div class="topbar-actions">
+        <div class="topbar-icon-btn">🔔<span class="notif-dot"></span></div>
+        <a href="#" class="btn btn-primary btn-sm">+ Cadastrar produto</a>
+        <a href="login.html" class="btn btn-ghost btn-sm">Sair</a>
+      </div>
+    </div>
+
+    <div class="dash-content">
+
+      <!-- Métricas -->
+      <div class="metrics-grid cols-4">
+        <div class="metric-card">
+          <div class="metric-icon" style="background:#F0FAF4;">💰</div>
+          <div class="metric-info">
+            <div class="metric-label">Receita do mês</div>
+            <div class="metric-value">R$ 4.280</div>
+            <div class="metric-delta delta-up">▲ 22% vs abril</div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon" style="background:#FEFCE8;">📦</div>
+          <div class="metric-info">
+            <div class="metric-label">Pedidos este mês</div>
+            <div class="metric-value">28</div>
+            <div class="metric-delta delta-up">▲ 4 novos hoje</div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon" style="background:#EFF6FF;">🎁</div>
+          <div class="metric-info">
+            <div class="metric-label">Doados este mês</div>
+            <div class="metric-value">128 kg</div>
+            <div class="metric-delta delta-up">▲ evitou descarte</div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon" style="background:#FFF5EC;">⭐</div>
+          <div class="metric-info">
+            <div class="metric-label">Avaliação média</div>
+            <div class="metric-value">4,9 / 5</div>
+            <div class="metric-delta delta-up">▲ 47 avaliações</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-grid cols-2-1" style="margin-bottom:1.1rem;">
+        <!-- Pedidos recebidos -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Pedidos recebidos</span>
+            <span class="badge badge-amarelo">4 aguardando</span>
+          </div>
+          <div class="card-body" style="padding:0;">
+            <table class="simple-table">
+              <thead><tr><th>Pedido</th><th>Comprador</th><th>Produtos</th><th>Valor</th><th>Status</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>#4821</td><td>Supermercado Verde</td><td>Tomate 50kg, Alface 30un</td><td>R$ 580</td>
+                  <td><span class="badge badge-amarelo">⏳ Aguardando</span></td>
+                  <td><button class="btn btn-primary btn-sm">Aceitar</button></td>
+                </tr>
+                <tr>
+                  <td>#4815</td><td>Ana Beatriz Costa</td><td>Cenoura 5kg</td><td>R$ 22</td>
+                  <td><span class="badge badge-amarelo">⏳ Aguardando</span></td>
+                  <td><button class="btn btn-primary btn-sm">Aceitar</button></td>
+                </tr>
+                <tr>
+                  <td>#4808</td><td>Rede SuperVerde</td><td>Mix de hortaliças 200kg</td><td>R$ 1.400</td>
+                  <td><span class="badge badge-azul">🚚 Em preparo</span></td>
+                  <td><button class="btn btn-ghost btn-sm">Detalhes</button></td>
+                </tr>
+                <tr>
+                  <td>#4802</td><td>Mercadão do Povo</td><td>Tomate 120kg</td><td>R$ 720</td>
+                  <td><span class="badge badge-verde">✔ Entregue</span></td>
+                  <td><button class="btn btn-ghost btn-sm">Ver</button></td>
+                </tr>
+                <tr>
+                  <td>#4796</td><td>Carlos Menezes</td><td>Alface 10un, Rúcula 5un</td><td>R$ 45</td>
+                  <td><span class="badge badge-verde">✔ Entregue</span></td>
+                  <td><button class="btn btn-ghost btn-sm">Ver</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Estoque / produtos -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Meus produtos</span>
+            <a href="#" class="btn btn-secondary btn-sm">+ Novo</a>
+          </div>
+          <div class="card-body" style="padding:0 1.2rem;">
+            <div class="item-list">
+              <div class="item-row">
+                <div class="item-avatar" style="background:#F0FAF4;font-size:1.3rem;">🍅</div>
+                <div class="item-info"><div class="item-name">Tomate Débora</div><div class="item-sub">R$ 6,00/kg · 380 kg disp.</div></div>
+                <div class="item-right"><span class="badge badge-verde">Ativo</span></div>
+              </div>
+              <div class="item-row">
+                <div class="item-avatar" style="background:#F0FAF4;font-size:1.3rem;">🥬</div>
+                <div class="item-info"><div class="item-name">Alface Crespa</div><div class="item-sub">R$ 2,50/un · 200 un disp.</div></div>
+                <div class="item-right"><span class="badge badge-verde">Ativo</span></div>
+              </div>
+              <div class="item-row">
+                <div class="item-avatar" style="background:#F0FAF4;font-size:1.3rem;">🥕</div>
+                <div class="item-info"><div class="item-name">Cenoura Caipira</div><div class="item-sub">R$ 4,50/kg · 90 kg disp.</div></div>
+                <div class="item-right"><span class="badge badge-amarelo">Baixo</span></div>
+              </div>
+              <div class="item-row">
+                <div class="item-avatar" style="background:#FFF5EC;font-size:1.3rem;">🌶️</div>
+                <div class="item-info"><div class="item-name">Pimentão Verde</div><div class="item-sub">R$ 5,00/kg · 0 kg disp.</div></div>
+                <div class="item-right"><span class="badge badge-red">Esgotado</span></div>
+              </div>
+              <div class="item-row">
+                <div class="item-avatar" style="background:#F0FAF4;font-size:1.3rem;">🥦</div>
+                <div class="item-info"><div class="item-name">Brócolis Ninja</div><div class="item-sub">R$ 7,00/kg · 60 kg disp.</div></div>
+                <div class="item-right"><span class="badge badge-verde">Ativo</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linha inferior -->
+      <div class="dash-grid cols-2">
+        <!-- Histórico financeiro -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Últimos pagamentos recebidos</span>
+            <a href="#" class="btn btn-ghost btn-sm">Ver extrato</a>
+          </div>
+          <div class="card-body" style="padding:0;">
+            <table class="simple-table">
+              <thead><tr><th>Data</th><th>Pedido</th><th>Comprador</th><th>Valor</th><th>Situação</th></tr></thead>
+              <tbody>
+                <tr><td>07/05</td><td>#4802</td><td>Mercadão do Povo</td><td style="font-weight:600;color:var(--verde);">+ R$ 720</td><td><span class="badge badge-verde">Pago</span></td></tr>
+                <tr><td>05/05</td><td>#4789</td><td>Supermercado Verde</td><td style="font-weight:600;color:var(--verde);">+ R$ 1.240</td><td><span class="badge badge-verde">Pago</span></td></tr>
+                <tr><td>03/05</td><td>#4774</td><td>Ana Beatriz Costa</td><td style="font-weight:600;color:var(--verde);">+ R$ 45</td><td><span class="badge badge-verde">Pago</span></td></tr>
+                <tr><td>01/05</td><td>#4760</td><td>Rede SuperVerde</td><td style="font-weight:600;color:var(--verde);">+ R$ 2.275</td><td><span class="badge badge-verde">Pago</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Doações e impacto -->
+        <div class="card">
+          <div class="card-header"><span class="card-title">🎁 Impacto das suas doações</span></div>
+          <div class="card-body">
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div style="background:var(--verde-bg);border-radius:var(--radius);padding:1rem;text-align:center;">
+                <div style="font-size:1.7rem;font-weight:700;color:var(--verde);">128 kg</div>
+                <div style="font-size:0.73rem;color:var(--cinza-suave);">doados este mês</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:0.65rem;">
+                <div style="display:flex;justify-content:space-between;font-size:0.78rem;"><span style="color:var(--cinza-suave);">Famílias beneficiadas</span><span style="font-weight:600;">64</span></div>
+                <div style="display:flex;justify-content:space-between;font-size:0.78rem;"><span style="color:var(--cinza-suave);">ONGs que retiraram</span><span style="font-weight:600;">2</span></div>
+                <div style="display:flex;justify-content:space-between;font-size:0.78rem;"><span style="color:var(--cinza-suave);">Descarte evitado (acum.)</span><span style="font-weight:600;color:var(--verde);">880 kg</span></div>
+                <div style="display:flex;justify-content:space-between;font-size:0.78rem;"><span style="color:var(--cinza-suave);">Certificado de impacto</span><span style="font-weight:600;color:var(--azul);cursor:pointer;">📄 Baixar</span></div>
+              </div>
+              <div style="border-top:1px solid #F0F0EB;padding-top:0.85rem;">
+                <div style="font-size:0.75rem;color:var(--cinza-suave);font-style:italic;">"Antes eu jogava fora 30% da produção. Agora, o que não vendo vai pra ONG parceira."</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

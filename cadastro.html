@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar conta — Comida que Conecta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .step { display: none; }
+    .step.active { display: block; }
+    .steps-indicator { display: flex; align-items: center; gap: 0; margin-bottom: 1.8rem; }
+    .step-dot { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #E0E0D8; display: flex; align-items: center; justify-content: center; font-size: 0.68rem; font-weight: 700; color: var(--cinza-suave); background: white; flex-shrink: 0; transition: all 0.3s; }
+    .step-dot.done   { background: var(--verde); border-color: var(--verde); color: white; }
+    .step-dot.active { border-color: var(--verde); color: var(--verde); }
+    .step-line { flex: 1; height: 2px; background: #E0E0D8; transition: background 0.3s; }
+    .step-line.done { background: var(--verde); }
+    .step-label { font-size: 0.62rem; color: var(--cinza-suave); margin-top: 4px; text-align: center; }
+    .steps-labels { display: flex; justify-content: space-between; margin-top: 4px; margin-bottom: 1.4rem; }
+    .steps-labels span { font-size: 0.62rem; color: var(--cinza-suave); font-weight: 500; }
+    .steps-labels span.active { color: var(--verde); font-weight: 600; }
+  </style>
+</head>
+<body>
+<div class="auth-page">
+
+  <!-- Lado esquerdo -->
+  <div class="auth-left">
+    <div class="auth-left-content">
+      <div class="logo" style="margin-bottom:2rem;">
+        <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8c-2.5 0-4 1.5-4 4s1.5 4 4 4 4-1.5 4-4-1.5-4-4-4z"/></svg></div>
+        <div><div class="logo-text" style="color:white;">Comida que Conecta</div><div class="logo-sub" style="color:rgba(255,255,255,0.45);">Do campo à mesa</div></div>
+      </div>
+      <h2>Junte-se à rede alimentar solidária</h2>
+      <p>Cadastro gratuito. Comece a fazer parte de uma cadeia que transforma excedente em impacto social real.</p>
+      <div class="auth-left-features">
+        <div class="auth-feat"><div class="auth-feat-icon">✅</div><span>Cadastro 100% gratuito para todos os perfis</span></div>
+        <div class="auth-feat"><div class="auth-feat-icon">🔒</div><span>Seus dados protegidos pela LGPD</span></div>
+        <div class="auth-feat"><div class="auth-feat-icon">⚡</div><span>Aprovação em até 24 horas para produtores e ONGs</span></div>
+        <div class="auth-feat"><div class="auth-feat-icon">🌎</div><span>Presente em toda a região Norte do Brasil</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lado direito -->
+  <div class="auth-right">
+    <div class="auth-form-wrap" style="max-width:480px;">
+      <div class="auth-logo">
+        <div class="logo-icon" style="background:var(--verde);"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8c-2.5 0-4 1.5-4 4s1.5 4 4 4 4-1.5 4-4-1.5-4-4-4z"/></svg></div>
+        <div class="logo-text">Comida que Conecta</div>
+      </div>
+
+      <h1>Criar conta gratuita</h1>
+      <p class="auth-sub">Preencha as informações para começar</p>
+
+      <!-- Indicador de etapas -->
+      <div class="steps-indicator">
+        <div class="step-dot active" id="dot-1">1</div>
+        <div class="step-line" id="line-1"></div>
+        <div class="step-dot" id="dot-2">2</div>
+        <div class="step-line" id="line-2"></div>
+        <div class="step-dot" id="dot-3">3</div>
+      </div>
+      <div class="steps-labels">
+        <span class="active" id="lbl-1">Perfil</span>
+        <span id="lbl-2">Dados</span>
+        <span id="lbl-3">Confirmação</span>
+      </div>
+
+      <!-- ETAPA 1: Escolha do perfil -->
+      <div class="step active" id="step-1">
+        <p style="font-size:0.83rem;color:var(--cinza);margin-bottom:1rem;">Como você quer usar a plataforma?</p>
+        <div class="auth-perfil-grid" style="grid-template-columns:1fr 1fr;">
+          <div class="perfil-option" data-perfil="produtor">
+            <span class="po-emoji">🌾</span>
+            <div class="po-name">Produtor Rural</div>
+          </div>
+          <div class="perfil-option" data-perfil="cliente">
+            <span class="po-emoji">🛒</span>
+            <div class="po-name">Consumidor</div>
+          </div>
+          <div class="perfil-option" data-perfil="mercado">
+            <span class="po-emoji">🏪</span>
+            <div class="po-name">Grande Mercado</div>
+          </div>
+          <div class="perfil-option" data-perfil="ong">
+            <span class="po-emoji">🤝</span>
+            <div class="po-name">ONG / Org. Social</div>
+          </div>
+        </div>
+        <button class="btn-submit" onclick="nextStep(1)">Continuar →</button>
+      </div>
+
+      <!-- ETAPA 2: Dados pessoais/organizacionais -->
+      <div class="step" id="step-2">
+        <div id="campos-dinamicos">
+          <!-- Preenchido pelo JS conforme perfil -->
+        </div>
+        <div style="display:flex;gap:0.8rem;margin-top:0.5rem;">
+          <button class="btn btn-ghost" style="flex:1;border-radius:10px;" onclick="prevStep(2)">← Voltar</button>
+          <button class="btn-submit" style="flex:2;border-radius:10px;padding:0.72rem;" onclick="nextStep(2)">Continuar →</button>
+        </div>
+      </div>
+
+      <!-- ETAPA 3: Confirmação -->
+      <div class="step" id="step-3">
+        <div style="text-align:center;padding:1rem 0 1.5rem;">
+          <div style="font-size:3.5rem;margin-bottom:1rem;">🎉</div>
+          <h2 style="font-size:1.2rem;font-weight:700;color:var(--preto);margin-bottom:0.5rem;">Conta criada com sucesso!</h2>
+          <p style="font-size:0.83rem;color:var(--cinza-suave);line-height:1.65;margin-bottom:1.5rem;">Sua solicitação foi enviada. Enviamos um e-mail de confirmação. <span id="msg-aprovacao"></span></p>
+          <div style="display:flex;flex-direction:column;gap:0.6rem;">
+            <a href="login.html" class="btn-submit" style="display:block;text-align:center;text-decoration:none;border-radius:10px;padding:0.76rem;">Ir para o login</a>
+            <a href="index.html" style="font-size:0.78rem;color:var(--verde);text-decoration:none;font-weight:500;text-align:center;margin-top:0.3rem;">← Voltar ao site</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="auth-link" style="margin-top:1rem;">Já tem conta? <a href="login.html">Entrar</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+<script>
+let perfilSelecionado = '';
+let currentStep = 1;
+
+const camposPorPerfil = {
+  produtor: `
+    <div class="form-row">
+      <div class="form-group"><label>Nome completo</label><input class="form-input" placeholder="João da Silva"></div>
+      <div class="form-group"><label>CPF</label><input class="form-input" placeholder="000.000.000-00"></div>
+    </div>
+    <div class="form-group"><label>Nome da propriedade</label><input class="form-input" placeholder="Sítio Boa Esperança"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Município</label><input class="form-input" placeholder="Itacoatiara"></div>
+      <div class="form-group"><label>Estado</label><select class="form-select"><option>AM</option><option>PA</option><option>RO</option></select></div>
+    </div>
+    <div class="form-group"><label>Tipo de produção</label><select class="form-select"><option>Horticultura</option><option>Fruticultura</option><option>Grãos e cereais</option><option>Apicultura</option><option>Misto</option></select></div>
+    <div class="form-group"><label>E-mail</label><input type="email" class="form-input" placeholder="seu@email.com"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Senha</label><input type="password" class="form-input" placeholder="••••••••"></div>
+      <div class="form-group"><label>Confirmar senha</label><input type="password" class="form-input" placeholder="••••••••"></div>
+    </div>`,
+  cliente: `
+    <div class="form-row">
+      <div class="form-group"><label>Nome completo</label><input class="form-input" placeholder="Maria Oliveira"></div>
+      <div class="form-group"><label>CPF</label><input class="form-input" placeholder="000.000.000-00"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Município</label><input class="form-input" placeholder="Manaus"></div>
+      <div class="form-group"><label>Estado</label><select class="form-select"><option>AM</option><option>PA</option><option>RO</option></select></div>
+    </div>
+    <div class="form-group"><label>E-mail</label><input type="email" class="form-input" placeholder="seu@email.com"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Senha</label><input type="password" class="form-input" placeholder="••••••••"></div>
+      <div class="form-group"><label>Confirmar senha</label><input type="password" class="form-input" placeholder="••••••••"></div>
+    </div>
+    <div class="checkbox-row"><input type="checkbox"><label>Quero receber ofertas e novidades por e-mail</label></div>`,
+  mercado: `
+    <div class="form-group"><label>Razão social</label><input class="form-input" placeholder="Supermercado XYZ Ltda"></div>
+    <div class="form-row">
+      <div class="form-group"><label>CNPJ</label><input class="form-input" placeholder="00.000.000/0001-00"></div>
+      <div class="form-group"><label>Telefone</label><input class="form-input" placeholder="(92) 99999-9999"></div>
+    </div>
+    <div class="form-group"><label>Responsável pelo cadastro</label><input class="form-input" placeholder="Carlos Ribeiro"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Município</label><input class="form-input" placeholder="Manaus"></div>
+      <div class="form-group"><label>Estado</label><select class="form-select"><option>AM</option><option>PA</option><option>RO</option></select></div>
+    </div>
+    <div class="form-group"><label>E-mail corporativo</label><input type="email" class="form-input" placeholder="compras@empresa.com"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Senha</label><input type="password" class="form-input" placeholder="••••••••"></div>
+      <div class="form-group"><label>Confirmar senha</label><input type="password" class="form-input" placeholder="••••••••"></div>
+    </div>`,
+  ong: `
+    <div class="form-group"><label>Nome da organização</label><input class="form-input" placeholder="ONG Raízes Solidárias"></div>
+    <div class="form-row">
+      <div class="form-group"><label>CNPJ</label><input class="form-input" placeholder="00.000.000/0001-00"></div>
+      <div class="form-group"><label>Nº do CNAS (opcional)</label><input class="form-input" placeholder="000000/2024"></div>
+    </div>
+    <div class="form-group"><label>Responsável legal</label><input class="form-input" placeholder="Maria Souza"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Município de atuação</label><input class="form-input" placeholder="Manaus"></div>
+      <div class="form-group"><label>Estado</label><select class="form-select"><option>AM</option><option>PA</option><option>RO</option></select></div>
+    </div>
+    <div class="form-group"><label>Capacidade de armazenagem (kg)</label><input class="form-input" placeholder="ex: 500"></div>
+    <div class="form-group"><label>E-mail institucional</label><input type="email" class="form-input" placeholder="contato@ong.org.br"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Senha</label><input type="password" class="form-input" placeholder="••••••••"></div>
+      <div class="form-group"><label>Confirmar senha</label><input type="password" class="form-input" placeholder="••••••••"></div>
+    </div>`
+};
+
+const msgAprovacao = {
+  produtor: 'Produtores passam por verificação em até 24h.',
+  mercado:  'Contratos B2B são analisados em até 48h.',
+  ong:      'ONGs passam por verificação documental em até 48h.',
+  cliente:  'Seu acesso já está liberado após confirmar o e-mail.'
+};
+
+function nextStep(from) {
+  if (from === 1) {
+    perfilSelecionado = document.querySelector('.perfil-option.selected')?.dataset.perfil;
+    if (!perfilSelecionado) { alert('Selecione um perfil para continuar.'); return; }
+    document.getElementById('campos-dinamicos').innerHTML =
+      camposPorPerfil[perfilSelecionado] +
+      `<div class="checkbox-row" style="margin-top:0.6rem;"><input type="checkbox"><label>Li e concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a></label></div>`;
+  }
+  if (from === 2) {
+    document.getElementById('msg-aprovacao').textContent = msgAprovacao[perfilSelecionado] || '';
+  }
+  setStep(from + 1);
+}
+function prevStep(from) { setStep(from - 1); }
+
+function setStep(n) {
+  currentStep = n;
+  [1,2,3].forEach(i => {
+    document.getElementById('step-'+i).classList.toggle('active', i === n);
+    const dot = document.getElementById('dot-'+i);
+    dot.classList.toggle('done', i < n);
+    dot.classList.toggle('active', i === n);
+    if (i < n) dot.textContent = '✓';
+    else dot.textContent = i;
+    document.getElementById('lbl-'+i)?.classList.toggle('active', i === n);
+    if (i < 3) document.getElementById('line-'+i)?.classList.toggle('done', i < n);
+  });
+}
+
+document.querySelectorAll('.perfil-option').forEach(opt => {
+  opt.addEventListener('click', () => {
+    document.querySelectorAll('.perfil-option').forEach(o => o.classList.remove('selected'));
+    opt.classList.add('selected');
+  });
+});
+</script>
+</body>
+</html>

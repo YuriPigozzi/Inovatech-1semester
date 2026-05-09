@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar — Comida que Conecta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="auth-page">
+
+  <!-- Lado esquerdo -->
+  <div class="auth-left">
+    <div class="auth-left-content">
+      <div class="logo" style="margin-bottom:2rem;">
+        <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8c-2.5 0-4 1.5-4 4s1.5 4 4 4 4-1.5 4-4-1.5-4-4-4z"/></svg></div>
+        <div><div class="logo-text" style="color:white;">Comida que Conecta</div><div class="logo-sub" style="color:rgba(255,255,255,0.45);">Do campo à mesa</div></div>
+      </div>
+      <h2>Bem-vindo de volta!</h2>
+      <p>Acesse sua conta e continue fazendo parte da maior rede alimentar solidária do Brasil.</p>
+      <div class="auth-left-features">
+        <div class="auth-feat"><div class="auth-feat-icon">🌾</div><span>Produtores rurais vendendo sem intermediários</span></div>
+        <div class="auth-feat"><div class="auth-feat-icon">🤝</div><span>ONGs redistribuindo alimentos para quem precisa</span></div>
+        <div class="auth-feat"><div class="auth-feat-icon">🛒</div><span>Consumidores com produtos frescos e rastreáveis</span></div>
+        <div class="auth-feat"><div class="auth-feat-icon">📊</div><span>Impacto social mensurado em tempo real</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lado direito (formulário) -->
+  <div class="auth-right">
+    <div class="auth-form-wrap">
+      <div class="auth-logo">
+        <div class="logo-icon" style="background:var(--verde);"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8c-2.5 0-4 1.5-4 4s1.5 4 4 4 4-1.5 4-4-1.5-4-4-4z"/></svg></div>
+        <div class="logo-text">Comida que Conecta</div>
+      </div>
+
+      <h1>Entrar na conta</h1>
+      <p class="auth-sub">Digite suas credenciais para acessar o painel</p>
+
+      <form onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label>Tipo de conta</label>
+          <select class="form-select" id="tipo-conta">
+            <option value="">Selecione seu perfil</option>
+            <option value="admin">Administrador</option>
+            <option value="produtor">Produtor Rural</option>
+            <option value="ong">ONG / Organização Social</option>
+            <option value="cliente">Cliente / Consumidor</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="email" class="form-input" placeholder="seu@email.com" id="email-input">
+        </div>
+        <div class="form-group">
+          <label>Senha</label>
+          <div style="position:relative;">
+            <input type="password" class="form-input" placeholder="••••••••" id="senha-input" style="padding-right:2.5rem;">
+            <span onclick="toggleSenha()" style="position:absolute;right:0.8rem;top:50%;transform:translateY(-50%);cursor:pointer;font-size:1rem;" id="olho">👁️</span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:flex-end;margin-bottom:1.2rem;">
+          <a href="#" style="font-size:0.75rem;color:var(--verde);text-decoration:none;font-weight:500;">Esqueci minha senha</a>
+        </div>
+        <button type="submit" class="btn-submit">Entrar</button>
+      </form>
+
+      <div class="auth-divider"><span>ou acesse como demonstração</span></div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;">
+        <a href="dashboard-admin.html"    class="btn btn-ghost btn-sm" style="border-radius:10px;justify-content:center;font-size:0.73rem;">🛡️ Admin</a>
+        <a href="dashboard-produtor.html" class="btn btn-ghost btn-sm" style="border-radius:10px;justify-content:center;font-size:0.73rem;">🌾 Produtor</a>
+        <a href="dashboard-ong.html"      class="btn btn-ghost btn-sm" style="border-radius:10px;justify-content:center;font-size:0.73rem;">🤝 ONG</a>
+        <a href="dashboard-cliente.html"  class="btn btn-ghost btn-sm" style="border-radius:10px;justify-content:center;font-size:0.73rem;">🛒 Cliente</a>
+      </div>
+
+      <p class="auth-link">Ainda não tem conta? <a href="cadastro.html">Criar conta gratuita</a></p>
+      <p class="auth-link" style="margin-top:0.5rem;"><a href="index.html">← Voltar ao site</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+<script>
+function toggleSenha() {
+  const inp = document.getElementById('senha-input');
+  const olho = document.getElementById('olho');
+  if (inp.type === 'password') { inp.type = 'text'; olho.textContent = '🙈'; }
+  else { inp.type = 'password'; olho.textContent = '👁️'; }
+}
+function handleLogin(e) {
+  e.preventDefault();
+  const tipo = document.getElementById('tipo-conta').value;
+  const rotas = {
+    admin: 'dashboard-admin.html',
+    produtor: 'dashboard-produtor.html',
+    ong: 'dashboard-ong.html',
+    cliente: 'dashboard-cliente.html'
+  };
+  if (rotas[tipo]) window.location.href = rotas[tipo];
+  else alert('Selecione o tipo de conta para continuar.');
+}
+</script>
+</body>
+</html>
