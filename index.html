@@ -1,279 +1,322 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles/styles.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <title>InovaTech</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comida que Conecta — Do campo à mesa, com propósito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav id="navbar">
-            <i class="fa-solid fa-burger" id="nav_logo"> Comida que Conecta</i>
 
-            <ul id="nav_list">
-                <li class="nav-item active">
-                    <a href="#home">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#menu">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials">Contate-nos</a>
-                </li>
-            </ul>
+<!-- ODS Banner -->
+<div class="ods-banner">
+  <div class="ods-item"><span class="ods-dot"></span>ODS 2 – Fome Zero</div>
+  <div class="ods-item"><span class="ods-dot"></span>ODS 12 – Consumo Responsável</div>
+  <div class="ods-item"><span class="ods-dot"></span>ODS 8 – Trabalho Decente</div>
+  <div class="ods-item"><span class="ods-dot"></span>ODS 10 – Redução das Desigualdades</div>
+</div>
 
-            <button class="btn-default">
-                
-            </button>
+<!-- Navbar -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/>
+        <path d="M12 8c-2.5 0-4 1.5-4 4s1.5 4 4 4 4-1.5 4-4-1.5-4-4-4z"/>
+        <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-text">Comida que Conecta</div>
+      <div class="logo-sub">Do campo à mesa</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#produtos">Produtos</a></li>
+    <li><a href="#ongs">Para ONGs</a></li>
+    <li><a href="#produtores">Produtores</a></li>
+  </ul>
+  <div class="nav-ctas">
+    <a href="login.html"    class="btn-outline">Entrar</a>
+    <a href="cadastro.html" class="btn-solid">Cadastrar</a>
+  </div>
+</nav>
 
-            <button id="mobile_btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </nav>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span></span>
+      Plataforma de Impacto Social &amp; Alimentar
+    </div>
+    <h1>Do campo à mesa,<br><em>com propósito</em></h1>
+    <p>Conectamos produtores rurais e famílias produtoras diretamente a consumidores e grandes mercados. O alimento que não vai à venda, vai para quem mais precisa — via ONGs parceiras.</p>
+    <div class="hero-ctas">
+      <a href="cadastro.html" class="btn-hero btn-hero-primary">Comprar agora</a>
+      <a href="cadastro.html" class="btn-hero btn-hero-secondary">Sou produtor rural</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-number">2.400+</div><div class="stat-label">Produtores cadastrados</div></div>
+      <div class="stat"><div class="stat-number">180+</div><div class="stat-label">ONGs parceiras</div></div>
+      <div class="stat"><div class="stat-number">12t</div><div class="stat-label">Alimentos redistribuídos</div></div>
+    </div>
+  </div>
 
-        <div id="mobile_menu">
-            <ul id="mobile_nav_list">
-                <li class="nav-item">
-                    <a href="#home">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#menu">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials">Contate-nos</a>
-                </li>
-            </ul>
+  <div class="hero-visual">
+    <div class="hero-map">
+      <div class="map-bg">
+        <svg viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg" style="width:85%;height:85%">
+          <defs>
+            <marker id="arrow"       markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#52B788"/></marker>
+            <marker id="arrow-blue"  markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6"/></marker>
+            <marker id="arrow-terra" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#BC6C25"/></marker>
+          </defs>
+          <rect x="130" y="20" width="140" height="64" rx="16" fill="#2D6A4F"/>
+          <text x="200" y="46" text-anchor="middle" fill="white" font-size="11" font-family="Poppins" font-weight="600">🌾  Produtor Rural</text>
+          <text x="200" y="62" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="9.5" font-family="Poppins">Família produtora</text>
+          <rect x="115" y="148" width="170" height="72" rx="16" fill="#F0FAF4" stroke="#52B788" stroke-width="2"/>
+          <text x="200" y="174" text-anchor="middle" fill="#2D6A4F" font-size="11" font-family="Poppins" font-weight="700">🔗 Comida que Conecta</text>
+          <text x="200" y="192" text-anchor="middle" fill="#52B788" font-size="9" font-family="Poppins">Triagem inteligente de alimentos</text>
+          <text x="200" y="207" text-anchor="middle" fill="#8A8A80" font-size="8.5" font-family="Poppins">Marketplace + Logística social</text>
+          <line x1="200" y1="84" x2="200" y2="144" stroke="#52B788" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="5,3"/>
+          <rect x="280" y="240" width="100" height="56" rx="12" fill="#FFF5EC" stroke="#E9A96B" stroke-width="1.5"/>
+          <text x="330" y="263" text-anchor="middle" fill="#BC6C25" font-size="10" font-family="Poppins" font-weight="600">🛒 Consumidor</text>
+          <text x="330" y="279" text-anchor="middle" fill="#BC6C25" font-size="8.5" font-family="Poppins">e Mercados</text>
+          <rect x="20" y="240" width="110" height="56" rx="12" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+          <text x="75" y="263" text-anchor="middle" fill="#1D4ED8" font-size="10" font-family="Poppins" font-weight="600">🤝 ONGs</text>
+          <text x="75" y="279" text-anchor="middle" fill="#1D4ED8" font-size="8.5" font-family="Poppins">Parceiras</text>
+          <path d="M 265 190 Q 320 190 320 237" stroke="#BC6C25" stroke-width="1.8" fill="none" marker-end="url(#arrow-terra)"/>
+          <text x="310" y="213" text-anchor="middle" fill="#BC6C25" font-size="8" font-family="Poppins">Venda</text>
+          <path d="M 135 190 Q 80 190 80 237" stroke="#3B82F6" stroke-width="1.8" fill="none" marker-end="url(#arrow-blue)"/>
+          <text x="88" y="213" text-anchor="middle" fill="#3B82F6" font-size="8" font-family="Poppins">Doação</text>
+          <rect x="20" y="328" width="110" height="44" rx="10" fill="white" stroke="#BFDBFE" stroke-width="1"/>
+          <text x="75" y="348" text-anchor="middle" fill="#1D4ED8" font-size="9" font-family="Poppins" font-weight="600">🍲 Cozinhas Coletivas</text>
+          <text x="75" y="362" text-anchor="middle" fill="#6B7280" font-size="8" font-family="Poppins">e famílias cadastradas</text>
+          <line x1="75" y1="296" x2="75" y2="325" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arrow-blue)" stroke-dasharray="4,3"/>
+          <circle cx="200" cy="126" r="14" fill="white" stroke="#52B788" stroke-width="1.5"/>
+          <text x="200" y="131" text-anchor="middle" font-size="13">✓</text>
+        </svg>
+      </div>
+      <div class="float-card fc-top">
+        <div class="fc-icon verde">🌿</div>
+        <div><div class="fc-label">Orgânicos disponíveis</div><div class="fc-value">348 produtos</div></div>
+      </div>
+      <div class="float-card fc-left">
+        <div class="fc-label">🔔 Novo pedido doação</div>
+        <div class="fc-value" style="font-size:0.8rem;color:#1D4ED8;">ONG Solidária AM</div>
+      </div>
+      <div class="float-card fc-bottom">
+        <div class="fc-icon terra">🥕</div>
+        <div><div class="fc-label">Colheita hoje</div><div class="fc-value">Faz. São João</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <button class="btn-default">
-                
-            </button>
-        </div>
-    </header>
+<!-- COMO FUNCIONA -->
+<section class="section flow-section" id="como-funciona">
+  <div class="section-tag">Como funciona</div>
+  <h2 class="section-title">Uma cadeia completa,<br>do produtor à mesa</h2>
+  <p class="section-sub">A plataforma gerencia todo o fluxo com triagem inteligente para decidir o que vai à venda e o que vai para doação.</p>
+  <div class="flow-grid">
+    <div class="flow-card" data-num="01"><div class="flow-icon" style="background:#F0FAF4;">🌱</div><h3>Produtor cadastra o alimento</h3><p>O produtor registra tipo, quantidade, qualidade e disponibilidade de retirada diretamente na plataforma.</p></div>
+    <div class="flow-card" data-num="02"><div class="flow-icon" style="background:#FFF9E6;">🔍</div><h3>Triagem e classificação automática</h3><p>O sistema classifica o alimento: viável vai ao marketplace; fora do padrão é encaminhado para doação.</p></div>
+    <div class="flow-card" data-num="03"><div class="flow-icon" style="background:#FFF5EC;">🛒</div><h3>Venda direta ao consumidor e mercados</h3><p>Produtos aprovados entram no marketplace com rastreabilidade de origem completa.</p></div>
+    <div class="flow-card" data-num="04"><div class="flow-icon" style="background:#EFF6FF;">🤝</div><h3>ONGs recebem alerta de doação</h3><p>Quando um lote não atinge padrão comercial, ONGs cadastradas recebem notificação automática.</p></div>
+    <div class="flow-card" data-num="05"><div class="flow-icon" style="background:#F0FAF4;">🍲</div><h3>Distribuição para cozinhas e famílias</h3><p>ONGs coletam e redistribuem para cozinhas coletivas e famílias inscritas no banco de beneficiários.</p></div>
+    <div class="flow-card" data-num="06"><div class="flow-icon" style="background:#FFF9E6;">📊</div><h3>Impacto rastreado em tempo real</h3><p>Painéis com dados de impacto: toneladas redistribuídas, famílias atendidas e emissões evitadas.</p></div>
+  </div>
+</section>
 
-    <main id="content">
-        <section id="home">
-            <div class="shape"></div>
-            <div id="cta">
-                <h1 class="title">
-                    Comida que Conecta.
-                    <span>eeeeeeee</span>
-                </h1>
+<!-- PERFIS -->
+<section class="section perfis-section" id="produtores">
+  <div class="section-tag">Para quem é</div>
+  <h2 class="section-title">Três perfis, um ecossistema</h2>
+  <p class="section-sub">A plataforma conecta três atores fundamentais da cadeia alimentar de forma simples e eficiente.</p>
+  <div class="perfis-grid">
+    <div class="perfil-card produtor">
+      <span class="perfil-emoji">🌾</span>
+      <h3>Produtor Rural &amp; Famílias Produtoras</h3>
+      <p>Venda direta ao consumidor sem intermediários e garanta que nenhum alimento seja desperdiçado.</p>
+      <ul class="perfil-list">
+        <li>Cadastro gratuito e simples</li>
+        <li>Gestão de lotes e disponibilidade</li>
+        <li>Pagamento direto e seguro</li>
+        <li>Certificação de origem rastreável</li>
+        <li>Alimento não vendável vira doação</li>
+      </ul>
+    </div>
+    <div class="perfil-card consumidor">
+      <span class="perfil-emoji">🛍️</span>
+      <h3>Consumidores &amp; Grandes Mercados</h3>
+      <p>Compre produtos frescos e rastreáveis direto de quem produz, com preço justo e sem atravessador.</p>
+      <ul class="perfil-list">
+        <li>Produtos frescos com origem verificada</li>
+        <li>Preços justos sem atravessador</li>
+        <li>Entrega ou retirada no produtor</li>
+        <li>Contratos de abastecimento para mercados</li>
+        <li>Consumo com impacto social positivo</li>
+      </ul>
+    </div>
+    <div class="perfil-card ong">
+      <span class="perfil-emoji">🤝</span>
+      <h3>ONGs &amp; Organizações Sociais</h3>
+      <p>Acesse gratuitamente alimentos que seriam descartados e distribua para quem precisa.</p>
+      <ul class="perfil-list">
+        <li>Alertas automáticos de doação disponível</li>
+        <li>Retirada gratuita no produtor</li>
+        <li>Gestão de beneficiários integrada</li>
+        <li>Relatórios de impacto automáticos</li>
+        <li>Rede de parceiros verificados</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit ut aliquam, purus sit amet
-                </p>
+<!-- IMPACTO -->
+<section class="impacto-section" id="impacto">
+  <div class="impacto-inner">
+    <div>
+      <div class="section-tag">Impacto real</div>
+      <h2 class="section-title">Zero desperdício é<br>o nosso objetivo</h2>
+      <p class="section-sub" style="margin-bottom:2rem;">No Brasil, 30% dos alimentos produzidos são desperdiçados. Estamos conectando o excedente a quem precisa.</p>
+      <a href="cadastro.html" class="btn-cta-primary" style="font-size:0.88rem;padding:0.7rem 1.5rem;">Ver relatório de impacto</a>
+    </div>
+    <div class="impacto-grid">
+      <div class="impacto-card"><div class="num">12,4t</div><div class="label">Alimentos redistribuídos este ano</div></div>
+      <div class="impacto-card"><div class="num">4.200</div><div class="label">Famílias beneficiadas por ONGs</div></div>
+      <div class="impacto-card"><div class="num">R$2.1M</div><div class="label">Renda gerada para produtores</div></div>
+      <div class="impacto-card"><div class="num">31t</div><div class="label">CO₂eq evitado com menos descarte</div></div>
+    </div>
+  </div>
+</section>
 
-                <div id="cta_buttons">
-                    <a href="#" class="btn-default">
-                    </a>
+<!-- PRODUTOS -->
+<section class="section alimentos-section" id="produtos">
+  <div class="section-tag">Marketplace</div>
+  <h2 class="section-title">Direto do produtor<br>para a sua mesa</h2>
+  <p class="section-sub">Explore produtos frescos, orgânicos e rastreáveis de produtores da sua região.</p>
+  <div class="categorias-grid">
+    <div class="cat-card"><span class="cat-emoji">🥬</span><div class="cat-name">Hortaliças</div></div>
+    <div class="cat-card"><span class="cat-emoji">🍅</span><div class="cat-name">Legumes</div></div>
+    <div class="cat-card"><span class="cat-emoji">🍊</span><div class="cat-name">Frutas</div></div>
+    <div class="cat-card"><span class="cat-emoji">🌽</span><div class="cat-name">Grãos</div></div>
+    <div class="cat-card"><span class="cat-emoji">🥚</span><div class="cat-name">Ovos &amp; Laticínios</div></div>
+    <div class="cat-card"><span class="cat-emoji">🍯</span><div class="cat-name">Processados</div></div>
+  </div>
+  <div class="produtos-grid">
+    <div class="produto-card"><div class="produto-img">🥕</div><div class="produto-info"><span class="produto-tag">Orgânico</span><div class="produto-nome">Cenoura Caipira</div><div class="produto-produtor">📍 Faz. dos Pinheiros, AM</div><div class="produto-footer"><div class="produto-preco">R$ 4,50 <span>/ kg</span></div><a href="login.html" class="btn-comprar">Comprar</a></div></div></div>
+    <div class="produto-card"><div class="produto-img">🍅</div><div class="produto-info"><span class="produto-tag">Fresco</span><div class="produto-nome">Tomate Débora</div><div class="produto-produtor">📍 Sítio Boa Vista, AM</div><div class="produto-footer"><div class="produto-preco">R$ 6,00 <span>/ kg</span></div><a href="login.html" class="btn-comprar">Comprar</a></div></div></div>
+    <div class="produto-card"><div class="produto-img">🥬</div><div class="produto-info"><span class="produto-tag">Orgânico</span><div class="produto-nome">Alface Crespa</div><div class="produto-produtor">📍 Faz. Verde Vida, AM</div><div class="produto-footer"><div class="produto-preco">R$ 2,50 <span>/ unid</span></div><a href="login.html" class="btn-comprar">Comprar</a></div></div></div>
+    <div class="produto-card"><div class="produto-img">🍯</div><div class="produto-info"><span class="produto-tag">Artesanal</span><div class="produto-nome">Mel de Abelha Nativa</div><div class="produto-produtor">📍 Comunidade Tucuruí, AM</div><div class="produto-footer"><div class="produto-preco">R$ 28,00 <span>/ 500g</span></div><a href="login.html" class="btn-comprar">Comprar</a></div></div></div>
+  </div>
+</section>
 
-                    <a href="#" id="phone_button">
-                        <button class="btn-default">
-                    </a>
-                </div>
-                </div>
-            </div>
+<!-- ONGs -->
+<section class="section ong-section" id="ongs">
+  <div class="ong-inner">
+    <div>
+      <div class="ong-badge">🤝 Para Organizações Sociais</div>
+      <h2 class="section-title">Alimento que sobra<br>nunca vai ao lixo</h2>
+      <p class="section-sub" style="margin-bottom:1.5rem;">ONGs cadastradas recebem alertas automáticos quando alimentos não atingem padrão comercial. A retirada é gratuita, direto no produtor.</p>
+      <p style="font-size:0.85rem;color:var(--cinza);margin-bottom:1.8rem;line-height:1.7;">O sistema integra o banco de beneficiários da ONG, permitindo rastrear exatamente quais cozinhas coletivas e famílias receberam cada lote.</p>
+      <a href="cadastro.html" class="btn-solid" style="padding:0.78rem 1.7rem;font-size:0.9rem;display:inline-block;text-decoration:none;">Cadastrar minha ONG</a>
+    </div>
+    <div class="ong-visual">
+      <div style="font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#6B7280;margin-bottom:1rem;">Fluxo de doação</div>
+      <div class="ong-flow">
+        <div class="ong-step"><div class="ong-step-icon">🔔</div><div><h4>Alerta de lote disponível</h4><p>ONG recebe notificação com tipo, quantidade e localização. Aceite em 1 toque.</p></div></div>
+        <div class="ong-step"><div class="ong-step-icon">🚛</div><div><h4>Agendamento de retirada</h4><p>ONG agenda a coleta diretamente com o produtor pela plataforma. Sem burocracia.</p></div></div>
+        <div class="ong-step"><div class="ong-step-icon">📦</div><div><h4>Retirada gratuita</h4><p>Equipe da ONG retira o alimento sem custo. Registro fotográfico automático.</p></div></div>
+        <div class="ong-step"><div class="ong-step-icon">🍲</div><div><h4>Distribuição rastreada</h4><p>Alimento chega às cozinhas coletivas e famílias cadastradas. Impacto registrado.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div id="banner">
-                <img src="src/images/hero.png" alt="">
-            </div>
-        </section>
+<!-- DEPOIMENTOS -->
+<section class="section depoimentos-section">
+  <div class="section-tag">Quem usa</div>
+  <h2 class="section-title">Histórias reais de impacto</h2>
+  <div class="depo-grid">
+    <div class="depo-card">
+      <div class="depo-stars">★★★★★</div>
+      <p class="depo-text">"Antes eu jogava fora mais de 30% da produção. Hoje, o que não atinge padrão vai pra ONG parceira. Recebi até carta de agradecimento das famílias."</p>
+      <div class="depo-autor"><div class="depo-avatar" style="background:#F0FAF4;color:var(--verde);">JN</div><div class="depo-autor-info"><div class="name">João Nascimento</div><div class="role">Produtor rural — Itacoatiara, AM</div></div></div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-stars">★★★★★</div>
+      <p class="depo-text">"Nossa cozinha atendia 80 famílias com dificuldade. Desde que nos cadastramos, atendemos 240 famílias por semana com alimentos frescos."</p>
+      <div class="depo-autor"><div class="depo-avatar" style="background:#EFF6FF;color:#1D4ED8;">MS</div><div class="depo-autor-info"><div class="name">Maria Souza</div><div class="role">Coordenadora — ONG Raízes Solidárias</div></div></div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-stars">★★★★★</div>
+      <p class="depo-text">"Nosso supermercado assinou contrato com 6 produtores locais pela plataforma. Produto mais fresco, preço melhor e impacto regional positivo."</p>
+      <div class="depo-autor"><div class="depo-avatar" style="background:#FFF5EC;color:var(--terra);">CR</div><div class="depo-autor-info"><div class="name">Carlos Ribeiro</div><div class="role">Gerente de compras — Rede SuperVerde</div></div></div>
+    </div>
+  </div>
+</section>
 
-        <section id="menu">
-            <h2 class="section-title">Sobre nós</h2>
-            <h3 class="section-subtitle">O que oferecemos?</h3>
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="section-tag" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.9);">Comece hoje</div>
+  <h2 class="section-title">Faça parte da maior rede alimentar solidária do Brasil</h2>
+  <p class="section-sub">Seja produtor, consumidor ou ONG — seu cadastro é gratuito e começa em menos de 5 minutos.</p>
+  <div class="cta-buttons">
+    <a href="cadastro.html" class="btn-cta-primary">Criar conta gratuita</a>
+    <a href="#como-funciona" class="btn-cta-ghost">Saiba mais</a>
+  </div>
+</section>
 
-            <div id="dishes">
-                <div clss="dish">
-                    <div class="dish-heart">
-                    </div>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="logo footer-logo">
+        <div class="logo-icon" style="background:var(--verde-claro);"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8c-2.5 0-4 1.5-4 4s1.5 4 4 4 4-1.5 4-4-1.5-4-4-4z"/></svg></div>
+        <div><div class="logo-text">Comida que Conecta</div><div class="logo-sub">Do campo à mesa</div></div>
+      </div>
+      <p class="footer-desc">Plataforma de e-commerce solidário que conecta produtores rurais a consumidores e redistribui alimentos para quem mais precisa, via ONGs parceiras.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Plataforma</h4>
+      <ul>
+        <li><a href="#">Marketplace</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#produtores">Para produtores</a></li>
+        <li><a href="#">Para mercados</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Impacto Social</h4>
+      <ul>
+        <li><a href="#ongs">Para ONGs</a></li>
+        <li><a href="#">Cozinhas coletivas</a></li>
+        <li><a href="cadastro.html">Cadastre sua ONG</a></li>
+        <li><a href="#">Relatório de impacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Parceiros</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Comida que Conecta. Todos os direitos reservados.</span>
+    <div class="footer-sdgs">
+      <span style="font-size:0.68rem;color:rgba(255,255,255,0.28);">Alinhado aos ODS:</span>
+      <span class="sdg-badge">ODS 2</span><span class="sdg-badge">ODS 8</span><span class="sdg-badge">ODS 10</span><span class="sdg-badge">ODS 12</span>
+    </div>
+  </div>
+</footer>
 
-                    <img src="src/images/dish.png" class="dish-image" alt="">
-
-                    <h3 class="dish-title">
-                        Lorem Ipsum
-                    </h3>
-
-                    <span class="dish-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="dish-rate">
-                 
-                        <span></span>
-                    </div>
-
-                    <div class="dish-price">
-                        <h4></h4>
-                        <button class="btn-default">
-                        </button>
-                    </div>
-                </div>
-
-                <div class="dish">
-                    <div class="dish-heart">
-                    </div>
-
-                    <img src="src/images/dish2.png" class="dish-image" alt="">
-
-                    <h3 class="dish-title">
-                        Lorem Ipsum
-                    </h3>
-
-                    <span class="dish-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="dish-rate">
-                        <span></span>
-                    </div>
-
-                    <div class="dish-price">
-                        <h4></h4>
-                        <button class="btn-default">
-                        </button>
-                    </div>
-                </div>
-
-                <div class="dish">
-                    <div class="dish-heart">
-                    </div>
-
-                    <img src="src/images/dish3.png" class="dish-image" alt="">
-
-                    <h3 class="dish-title">
-                        Lorem Ipsum
-                    </h3>
-
-                    <span class="dish-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                   
-                        <span></span>
-                    </div>
-
-                    <div class="dish-price">
-                        <h4></h4>
-                        <button class="btn-default">
-                        </button>
-                    </div>
-                </div>
-
-                <div class="dish">
-                    <div class="dish-heart">
-                    </div>
-
-                    <img src="src/images/dish4.png" class="dish-image" alt="">
-
-                    <h3 class="dish-title">
-                        Lorem Ipsum
-                    </h3>
-
-                    <span class="dish-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="dish-rate">
-                        
-                        <span></span>
-                    </div>
-
-                    <div class="dish-price">
-                        <h4></h4>
-                        <button class="btn-default">
-                
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials">
-            <img src="src/images/chef.png" id="testimonial_chef" alt="">
-
-            <div id="testimonials_content">
-                <h2 class="section-title">
-                    EEEEEEEEEEEEE
-                </h2>
-                <h3 class="section-subtitle">
-                    EEEEEEEEEEEEEE
-                </h3>
-
-                <div id="feedbacks">
-                    <div class="feedback">
-                        <img src="src/images/avatar.png" class="feedback-avatar" alt="">
-
-                        <div class="feedback-content">
-                            <p>
-                                eeeeeeeeeeeeeeee
-                                <span>
-                                
-                    
-                                </span>
-                            </p>
-                            <p>
-                                "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Repellat voluptatibus cumque dolor ea est quae alias necessitatibus"
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="feedback">
-                        <img src="src/images/avatar.png" class="feedback-avatar" alt="">
-
-                        <div class="feedback-content">
-                            <p>
-                                eeeeeeeeeeeee
-                                <span>
-                                
-                                </span>
-                            </p>
-                            <p>
-                                "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Repellat voluptatibus cumque dolor ea est quae alias necessitatibus"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="btn-default">
-                    eeeeeeeee
-                </button>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <img src="src/images/wave.svg" alt="">
-
-        <div id="footer_items">
-            <span id="copyright">
-                comidaqueconecta© 
-            </span>
-
-            <div class="social-media-buttons">
-                <a href="">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-
-                <a href="">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-    <script src="src/javascript/script.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
